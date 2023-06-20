@@ -61,7 +61,7 @@
       <ErrorReporting>None</ErrorReporting>
       <WarningLevel>Level4</WarningLevel>
       <DisableSpecificWarnings>4231; 4251; 4275; 4355; 4505</DisableSpecificWarnings>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>$(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -82,215 +82,198 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <!-- Original File with special treatment -->
   <!-- Source Files -->
   <!-- The order of the first three matters -->
   <ItemGroup>
-    <ClCompile Include="cryptlib.cpp" />
-    <ClCompile Include="cpu.cpp" />
-    <ClCompile Include="integer.cpp" />
-    <ClCompile Include="3way.cpp" />
-    <ClCompile Include="adler32.cpp" />
-    <ClCompile Include="algebra.cpp" />
-    <ClCompile Include="algparam.cpp" />
-    <ClCompile Include="allocate.cpp" />
-    <ClCompile Include="arc4.cpp" />
-    <ClCompile Include="aria.cpp" />
-    <ClCompile Include="aria_simd.cpp" />
-    <ClCompile Include="ariatab.cpp" />
-    <ClCompile Include="asn.cpp" />
-    <ClCompile Include="authenc.cpp" />
-    <ClCompile Include="base32.cpp" />
-    <ClCompile Include="base64.cpp" />
-    <ClCompile Include="basecode.cpp" />
-    <ClCompile Include="bfinit.cpp" />
-    <ClCompile Include="blake2.cpp" />
-    <ClCompile Include="blake2s_simd.cpp" />
-    <ClCompile Include="blake2b_simd.cpp" />
-    <ClCompile Include="blowfish.cpp" />
-    <ClCompile Include="blumshub.cpp" />
-    <ClCompile Include="camellia.cpp" />
-    <ClCompile Include="cast.cpp" />
-    <ClCompile Include="casts.cpp" />
-    <ClCompile Include="cbcmac.cpp" />
-    <ClCompile Include="ccm.cpp" />
-    <ClCompile Include="chacha.cpp" />
-    <ClCompile Include="chacha_simd.cpp" />
-    <ClCompile Include="chacha_avx.cpp">
-      <!-- Requires Visual Studio 2013 and above -->
-      <ExcludedFromBuild Condition=" '$(PlatformToolset)' == 'v100' Or '$(PlatformToolset)' == 'v110' ">true</ExcludedFromBuild>
-      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
-    </ClCompile>
-    <ClCompile Include="chachapoly.cpp" />
-    <ClCompile Include="cham.cpp" />
-    <ClCompile Include="cham_simd.cpp" />
-    <ClCompile Include="channels.cpp" />
-    <ClCompile Include="cmac.cpp" />
-    <ClCompile Include="crc.cpp" />
-    <ClCompile Include="crc_simd.cpp" />
-    <ClCompile Include="darn.cpp" />
-    <ClCompile Include="default.cpp" />
-    <ClCompile Include="des.cpp" />
-    <ClCompile Include="dessp.cpp" />
-    <ClCompile Include="dh.cpp" />
-    <ClCompile Include="dh2.cpp" />
-    <ClCompile Include="dll.cpp">
-      <PrecompiledHeader />
-    </ClCompile>
-    <ClCompile Include="donna_32.cpp" />
-    <ClCompile Include="donna_64.cpp" />
-    <ClCompile Include="donna_sse.cpp" />
-    <ClCompile Include="dsa.cpp" />
-    <ClCompile Include="eax.cpp" />
-    <ClCompile Include="ec2n.cpp" />
-    <ClCompile Include="eccrypto.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ecp.cpp" />
-    <ClCompile Include="elgamal.cpp" />
-    <ClCompile Include="emsa2.cpp" />
-    <ClCompile Include="eprecomp.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="esign.cpp" />
-    <ClCompile Include="files.cpp" />
-    <ClCompile Include="filters.cpp" />
-    <ClCompile Include="fips140.cpp" />
-    <ClCompile Include="fipstest.cpp" />
-    <ClCompile Include="gcm.cpp" />
-    <ClCompile Include="gcm_simd.cpp" />
-    <ClCompile Include="gf256.cpp" />
-    <ClCompile Include="gf2_32.cpp" />
-    <ClCompile Include="gf2n.cpp" />
-    <ClCompile Include="gf2n_simd.cpp" />
-    <ClCompile Include="gfpcrypt.cpp" />
-    <ClCompile Include="gost.cpp" />
-    <ClCompile Include="gzip.cpp" />
-    <ClCompile Include="hc128.cpp" />
-    <ClCompile Include="hc256.cpp" />
-    <ClCompile Include="hex.cpp" />
-    <ClCompile Include="hight.cpp" />
-    <ClCompile Include="hmac.cpp" />
-    <ClCompile Include="hrtimer.cpp" />
-    <ClCompile Include="ida.cpp" />
-    <ClCompile Include="idea.cpp" />
-    <ClCompile Include="iterhash.cpp">
-      <PrecompiledHeader />
-    </ClCompile>
-    <ClCompile Include="kalyna.cpp" />
-    <ClCompile Include="kalynatab.cpp" />
-    <ClCompile Include="keccak.cpp" />
-    <ClCompile Include="keccak_core.cpp" />
-    <ClCompile Include="keccak_simd.cpp" />
-    <ClCompile Include="lea.cpp" />
-    <ClCompile Include="lea_simd.cpp" />
-    <ClCompile Include="lsh256.cpp" />
-    <ClCompile Include="lsh256_sse.cpp" />
-    <ClCompile Include="lsh256_avx.cpp" />
-    <ClCompile Include="lsh512.cpp" />
-    <ClCompile Include="lsh512_sse.cpp" />
-    <ClCompile Include="lsh512_avx.cpp" />
-    <ClCompile Include="luc.cpp" />
-    <ClCompile Include="mars.cpp" />
-    <ClCompile Include="marss.cpp" />
-    <ClCompile Include="md2.cpp" />
-    <ClCompile Include="md4.cpp" />
-    <ClCompile Include="md5.cpp" />
-    <ClCompile Include="misc.cpp" />
-    <ClCompile Include="modes.cpp" />
-    <ClCompile Include="mqueue.cpp" />
-    <ClCompile Include="mqv.cpp" />
-    <ClCompile Include="nbtheory.cpp" />
-    <ClCompile Include="oaep.cpp" />
-    <ClCompile Include="osrng.cpp" />
-    <ClCompile Include="padlkrng.cpp" />
-    <ClCompile Include="panama.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader>Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="pkcspad.cpp" />
-    <ClCompile Include="poly1305.cpp" />
-    <ClCompile Include="polynomi.cpp" />
-    <ClCompile Include="pssr.cpp" />
-    <ClCompile Include="pubkey.cpp" />
-    <ClCompile Include="queue.cpp" />
-    <ClCompile Include="rabin.cpp" />
-    <ClCompile Include="randpool.cpp" />
-    <ClCompile Include="rabbit.cpp" />
-    <ClCompile Include="rc2.cpp" />
-    <ClCompile Include="rc5.cpp" />
-    <ClCompile Include="rc6.cpp" />
-    <ClCompile Include="rdrand.cpp" />
-    <ClCompile Include="rdtables.cpp" />
-    <ClCompile Include="rijndael.cpp" />
-    <ClCompile Include="rijndael_simd.cpp" />
-    <ClCompile Include="ripemd.cpp" />
-    <ClCompile Include="rng.cpp" />
-    <ClCompile Include="rsa.cpp" />
-    <ClCompile Include="rw.cpp" />
-    <ClCompile Include="safer.cpp" />
-    <ClCompile Include="salsa.cpp" />
-    <ClCompile Include="scrypt.cpp" />
-    <ClCompile Include="seal.cpp" />
-    <ClCompile Include="seed.cpp" />
-    <ClCompile Include="serpent.cpp" />
-    <ClCompile Include="sha.cpp" />
-    <ClCompile Include="sha_simd.cpp" />
-    <ClCompile Include="sha3.cpp" />
-    <ClCompile Include="shacal2.cpp" />
-    <ClCompile Include="shacal2_simd.cpp" />
-    <ClCompile Include="shake.cpp" />
-    <ClCompile Include="shark.cpp" />
-    <ClCompile Include="sharkbox.cpp" />
-    <ClCompile Include="simeck.cpp" />
-    <ClCompile Include="simon.cpp" />
-    <ClCompile Include="simon128_simd.cpp" />
-    <ClCompile Include="simple.cpp" />
-    <ClCompile Include="skipjack.cpp" />
-    <ClCompile Include="sm3.cpp" />
-    <ClCompile Include="sm4.cpp" />
-    <ClCompile Include="sm4_simd.cpp" />
-    <ClCompile Include="sosemanuk.cpp" />
-    <ClCompile Include="speck.cpp" />
-    <ClCompile Include="speck128_simd.cpp" />
-    <ClCompile Include="square.cpp" />
-    <ClCompile Include="squaretb.cpp" />
-    <ClCompile Include="sse_simd.cpp" />
-    <ClCompile Include="strciphr.cpp" />
-    <ClCompile Include="tea.cpp" />
-    <ClCompile Include="tftables.cpp" />
-    <ClCompile Include="threefish.cpp" />
-    <ClCompile Include="tiger.cpp" />
-    <ClCompile Include="tigertab.cpp" />
-    <ClCompile Include="ttmac.cpp" />
-    <ClCompile Include="tweetnacl.cpp" />
-    <ClCompile Include="twofish.cpp" />
-    <ClCompile Include="vmac.cpp" />
-    <ClCompile Include="wake.cpp" />
-    <ClCompile Include="whrlpool.cpp" />
-    <ClCompile Include="xed25519.cpp" />
-    <ClCompile Include="xtr.cpp" />
-    <ClCompile Include="xtrcrypt.cpp" />
-    <ClCompile Include="xts.cpp" />
-    <ClCompile Include="zdeflate.cpp" />
-    <ClCompile Include="zinflate.cpp" />
-    <ClCompile Include="zlib.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Doxyfile" />
-    <None Include="GNUmakefile" />
-    <None Include="License.txt" />
-    <None Include="Readme.txt" />
+    <ClCompile Include="src\3way.cpp" />
+    <ClCompile Include="src\adler32.cpp" />
+    <ClCompile Include="src\algebra.cpp" />
+    <ClCompile Include="src\algparam.cpp" />
+    <ClCompile Include="src\allocate.cpp" />
+    <ClCompile Include="src\arc4.cpp" />
+    <ClCompile Include="src\aria.cpp" />
+    <ClCompile Include="src\ariatab.cpp" />
+    <ClCompile Include="src\aria_simd.cpp" />
+    <ClCompile Include="src\asn.cpp" />
+    <ClCompile Include="src\authenc.cpp" />
+    <ClCompile Include="src\base32.cpp" />
+    <ClCompile Include="src\base64.cpp" />
+    <ClCompile Include="src\basecode.cpp" />
+    <ClCompile Include="src\bfinit.cpp" />
+    <ClCompile Include="src\blake2.cpp" />
+    <ClCompile Include="src\blake2b_simd.cpp" />
+    <ClCompile Include="src\blake2s_simd.cpp" />
+    <ClCompile Include="src\blowfish.cpp" />
+    <ClCompile Include="src\blumshub.cpp" />
+    <ClCompile Include="src\camellia.cpp" />
+    <ClCompile Include="src\cast.cpp" />
+    <ClCompile Include="src\casts.cpp" />
+    <ClCompile Include="src\cbcmac.cpp" />
+    <ClCompile Include="src\ccm.cpp" />
+    <ClCompile Include="src\chacha.cpp" />
+    <ClCompile Include="src\chachapoly.cpp" />
+    <ClCompile Include="src\chacha_avx.cpp" />
+    <ClCompile Include="src\chacha_simd.cpp" />
+    <ClCompile Include="src\cham.cpp" />
+    <ClCompile Include="src\cham_simd.cpp" />
+    <ClCompile Include="src\channels.cpp" />
+    <ClCompile Include="src\cmac.cpp" />
+    <ClCompile Include="src\cpu.cpp" />
+    <ClCompile Include="src\crc.cpp" />
+    <ClCompile Include="src\crc_simd.cpp" />
+    <ClCompile Include="src\cryptlib.cpp" />
+    <ClCompile Include="src\darn.cpp" />
+    <ClCompile Include="src\default.cpp" />
+    <ClCompile Include="src\des.cpp" />
+    <ClCompile Include="src\dessp.cpp" />
+    <ClCompile Include="src\dh.cpp" />
+    <ClCompile Include="src\dh2.cpp" />
+    <ClCompile Include="src\dll.cpp" />
+    <ClCompile Include="src\donna_32.cpp" />
+    <ClCompile Include="src\donna_64.cpp" />
+    <ClCompile Include="src\donna_sse.cpp" />
+    <ClCompile Include="src\dsa.cpp" />
+    <ClCompile Include="src\eax.cpp" />
+    <ClCompile Include="src\ec2n.cpp" />
+    <ClCompile Include="src\eccrypto.cpp" />
+    <ClCompile Include="src\ecp.cpp" />
+    <ClCompile Include="src\elgamal.cpp" />
+    <ClCompile Include="src\emsa2.cpp" />
+    <ClCompile Include="src\eprecomp.cpp" />
+    <ClCompile Include="src\esign.cpp" />
+    <ClCompile Include="src\files.cpp" />
+    <ClCompile Include="src\filters.cpp" />
+    <ClCompile Include="src\fips140.cpp" />
+    <ClCompile Include="src\fipstest.cpp" />
+    <ClCompile Include="src\gcm.cpp" />
+    <ClCompile Include="src\gcm_simd.cpp" />
+    <ClCompile Include="src\gf256.cpp" />
+    <ClCompile Include="src\gf2n.cpp" />
+    <ClCompile Include="src\gf2n_simd.cpp" />
+    <ClCompile Include="src\gf2_32.cpp" />
+    <ClCompile Include="src\gfpcrypt.cpp" />
+    <ClCompile Include="src\gost.cpp" />
+    <ClCompile Include="src\gzip.cpp" />
+    <ClCompile Include="src\hc128.cpp" />
+    <ClCompile Include="src\hc256.cpp" />
+    <ClCompile Include="src\hex.cpp" />
+    <ClCompile Include="src\hight.cpp" />
+    <ClCompile Include="src\hmac.cpp" />
+    <ClCompile Include="src\hrtimer.cpp" />
+    <ClCompile Include="src\ida.cpp" />
+    <ClCompile Include="src\idea.cpp" />
+    <ClCompile Include="src\integer.cpp" />
+    <ClCompile Include="src\iterhash.cpp" />
+    <ClCompile Include="src\kalyna.cpp" />
+    <ClCompile Include="src\kalynatab.cpp" />
+    <ClCompile Include="src\keccak.cpp" />
+    <ClCompile Include="src\keccak_core.cpp" />
+    <ClCompile Include="src\keccak_simd.cpp" />
+    <ClCompile Include="src\lea.cpp" />
+    <ClCompile Include="src\lea_simd.cpp" />
+    <ClCompile Include="src\lsh256.cpp" />
+    <ClCompile Include="src\lsh256_avx.cpp" />
+    <ClCompile Include="src\lsh256_sse.cpp" />
+    <ClCompile Include="src\lsh512.cpp" />
+    <ClCompile Include="src\lsh512_avx.cpp" />
+    <ClCompile Include="src\lsh512_sse.cpp" />
+    <ClCompile Include="src\luc.cpp" />
+    <ClCompile Include="src\mars.cpp" />
+    <ClCompile Include="src\marss.cpp" />
+    <ClCompile Include="src\md2.cpp" />
+    <ClCompile Include="src\md4.cpp" />
+    <ClCompile Include="src\md5.cpp" />
+    <ClCompile Include="src\misc.cpp" />
+    <ClCompile Include="src\modes.cpp" />
+    <ClCompile Include="src\mqueue.cpp" />
+    <ClCompile Include="src\mqv.cpp" />
+    <ClCompile Include="src\nbtheory.cpp" />
+    <ClCompile Include="src\neon_simd.cpp" />
+    <ClCompile Include="src\oaep.cpp" />
+    <ClCompile Include="src\osrng.cpp" />
+    <ClCompile Include="src\padlkrng.cpp" />
+    <ClCompile Include="src\panama.cpp" />
+    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\pkcspad.cpp" />
+    <ClCompile Include="src\poly1305.cpp" />
+    <ClCompile Include="src\polynomi.cpp" />
+    <ClCompile Include="src\ppc_power7.cpp" />
+    <ClCompile Include="src\ppc_power8.cpp" />
+    <ClCompile Include="src\ppc_power9.cpp" />
+    <ClCompile Include="src\ppc_simd.cpp" />
+    <ClCompile Include="src\pssr.cpp" />
+    <ClCompile Include="src\pubkey.cpp" />
+    <ClCompile Include="src\queue.cpp" />
+    <ClCompile Include="src\rabbit.cpp" />
+    <ClCompile Include="src\rabin.cpp" />
+    <ClCompile Include="src\randpool.cpp" />
+    <ClCompile Include="src\rc2.cpp" />
+    <ClCompile Include="src\rc5.cpp" />
+    <ClCompile Include="src\rc6.cpp" />
+    <ClCompile Include="src\rdrand.cpp" />
+    <ClCompile Include="src\rdtables.cpp" />
+    <ClCompile Include="src\rijndael.cpp" />
+    <ClCompile Include="src\rijndael_simd.cpp" />
+    <ClCompile Include="src\ripemd.cpp" />
+    <ClCompile Include="src\rng.cpp" />
+    <ClCompile Include="src\rsa.cpp" />
+    <ClCompile Include="src\rw.cpp" />
+    <ClCompile Include="src\safer.cpp" />
+    <ClCompile Include="src\salsa.cpp" />
+    <ClCompile Include="src\scrypt.cpp" />
+    <ClCompile Include="src\seal.cpp" />
+    <ClCompile Include="src\seed.cpp" />
+    <ClCompile Include="src\serpent.cpp" />
+    <ClCompile Include="src\sha.cpp" />
+    <ClCompile Include="src\sha3.cpp" />
+    <ClCompile Include="src\shacal2.cpp" />
+    <ClCompile Include="src\shacal2_simd.cpp" />
+    <ClCompile Include="src\shake.cpp" />
+    <ClCompile Include="src\shark.cpp" />
+    <ClCompile Include="src\sharkbox.cpp" />
+    <ClCompile Include="src\sha_simd.cpp" />
+    <ClCompile Include="src\simeck.cpp" />
+    <ClCompile Include="src\simon.cpp" />
+    <ClCompile Include="src\simon128_simd.cpp" />
+    <ClCompile Include="src\simple.cpp" />
+    <ClCompile Include="src\skipjack.cpp" />
+    <ClCompile Include="src\sm3.cpp" />
+    <ClCompile Include="src\sm4.cpp" />
+    <ClCompile Include="src\sm4_simd.cpp" />
+    <ClCompile Include="src\sosemanuk.cpp" />
+    <ClCompile Include="src\speck.cpp" />
+    <ClCompile Include="src\speck128_simd.cpp" />
+    <ClCompile Include="src\square.cpp" />
+    <ClCompile Include="src\squaretb.cpp" />
+    <ClCompile Include="src\sse_simd.cpp" />
+    <ClCompile Include="src\strciphr.cpp" />
+    <ClCompile Include="src\tea.cpp" />
+    <ClCompile Include="src\tftables.cpp" />
+    <ClCompile Include="src\threefish.cpp" />
+    <ClCompile Include="src\tiger.cpp" />
+    <ClCompile Include="src\tigertab.cpp" />
+    <ClCompile Include="src\ttmac.cpp" />
+    <ClCompile Include="src\tweetnacl.cpp" />
+    <ClCompile Include="src\twofish.cpp" />
+    <ClCompile Include="src\vmac.cpp" />
+    <ClCompile Include="src\wake.cpp" />
+    <ClCompile Include="src\whrlpool.cpp" />
+    <ClCompile Include="src\xed25519.cpp" />
+    <ClCompile Include="src\xtr.cpp" />
+    <ClCompile Include="src\xtrcrypt.cpp" />
+    <ClCompile Include="src\xts.cpp" />
+    <ClCompile Include="src\zdeflate.cpp" />
+    <ClCompile Include="src\zinflate.cpp" />
+    <ClCompile Include="src\zlib.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Condition="'$(Platform)'=='Win32'" Include="rdrand.asm">
@@ -298,222 +281,240 @@
       <Command>ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo"$(IntDir)rdrand-x86.obj" "%(FullPath)"</Command>
       <Outputs>$(IntDir)\rdrand-x86.obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Condition="'$(Platform)'=='x64'" Include="rdrand.asm">
-      <Message>Building and assembling rdrand.asm</Message>
-      <Command>ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)rdrand-x64.obj" "%(FullPath)"</Command>
-      <Outputs>$(IntDir)\rdrand-x64.obj;%(Outputs)</Outputs>
-    </CustomBuild>
     <CustomBuild Condition="'$(Platform)'=='Win32'" Include="rdseed.asm">
       <Message>Building and assembling rdseed.asm</Message>
       <Command>ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo"$(IntDir)rdseed-x86.obj" "%(FullPath)"</Command>
       <Outputs>$(IntDir)\rdseed-x86.obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Condition="'$(Platform)'=='x64'" Include="rdseed.asm">
-      <Message>Building and assembling rdseed.asm</Message>
-      <Command>ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)rdseed-x64.obj" "%(FullPath)"</Command>
-      <Outputs>$(IntDir)\rdseed-x64.obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Condition="'$(Platform)'=='x64' AND ('$(Configuration)'=='Debug' Or '$(Configuration)'=='Release')" Include="x64dll.asm">
-      <Message>Building and assembling x64dll.asm</Message>
-      <Command>ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)x64dll.obj" "%(FullPath)"</Command>
-      <Outputs>$(IntDir)x64dll.obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building and Assembling %(Filename).asm</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building and Assembling %(Filename).asm</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-    </CustomBuild>
-    <CustomBuild Condition="'$(Platform)'=='x64'" Include="x64masm.asm">
-      <Message>Building and Assembling x64masm.asm</Message>
-      <Command>ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)x64masm.obj" "%(FullPath)"</Command>
-      <Outputs>$(IntDir)x64masm.obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building and Assembling %(Filename).asm</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building and Assembling %(Filename).asm</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3way.h" />
-    <ClInclude Include="adler32.h" />
-    <ClInclude Include="adv_simd.h" />
-    <ClInclude Include="aes.h" />
-    <ClInclude Include="algebra.h" />
-    <ClInclude Include="algparam.h" />
-    <ClInclude Include="allocate.h" />
-    <ClInclude Include="arc4.h" />
-    <ClInclude Include="aria.h" />
-    <ClInclude Include="argnames.h" />
-    <ClInclude Include="asn.h" />
-    <ClInclude Include="authenc.h" />
-    <ClInclude Include="base32.h" />
-    <ClInclude Include="base64.h" />
-    <ClInclude Include="basecode.h" />
-    <ClInclude Include="blake2.h" />
-    <ClInclude Include="blowfish.h" />
-    <ClInclude Include="blumshub.h" />
-    <ClInclude Include="camellia.h" />
-    <ClInclude Include="cast.h" />
-    <ClInclude Include="cbcmac.h" />
-    <ClInclude Include="ccm.h" />
-    <ClInclude Include="chacha.h" />
-    <ClInclude Include="chachapoly.h" />
-    <ClInclude Include="cham.h" />
-    <ClInclude Include="channels.h" />
-    <ClInclude Include="cmac.h" />
-    <ClInclude Include="config.h" />
-    <ClInclude Include="config_align.h" />
-    <ClInclude Include="config_asm.h" />
-    <ClInclude Include="config_cpu.h" />
-    <ClInclude Include="config_cxx.h" />
-    <ClInclude Include="config_dll.h" />
-    <ClInclude Include="config_int.h" />
-    <ClInclude Include="config_misc.h" />
-    <ClInclude Include="config_ns.h" />
-    <ClInclude Include="config_os.h" />
-    <ClInclude Include="config_ver.h" />
-    <ClInclude Include="cpu.h" />
-    <ClInclude Include="crc.h" />
-    <ClInclude Include="cryptlib.h" />
-    <ClInclude Include="darn.h" />
-    <ClInclude Include="default.h" />
-    <ClInclude Include="des.h" />
-    <ClInclude Include="dh.h" />
-    <ClInclude Include="dh2.h" />
-    <ClInclude Include="dmac.h" />
-    <ClInclude Include="drbg.h" />
-    <ClInclude Include="donna.h" />
-    <ClInclude Include="donna_32.h" />
-    <ClInclude Include="donna_64.h" />
-    <ClInclude Include="donna_sse.h" />
-    <ClInclude Include="dsa.h" />
-    <ClInclude Include="eax.h" />
-    <ClInclude Include="ec2n.h" />
-    <ClInclude Include="eccrypto.h" />
-    <ClInclude Include="ecp.h" />
-    <ClInclude Include="ecpoint.h" />
-    <ClInclude Include="elgamal.h" />
-    <ClInclude Include="emsa2.h" />
-    <ClInclude Include="eprecomp.h" />
-    <ClInclude Include="esign.h" />
-    <ClInclude Include="files.h" />
-    <ClInclude Include="filters.h" />
-    <ClInclude Include="fips140.h" />
-    <ClInclude Include="fhmqv.h" />
-    <ClInclude Include="fltrimpl.h" />
-    <ClInclude Include="gcm.h" />
-    <ClInclude Include="gf256.h" />
-    <ClInclude Include="gf2_32.h" />
-    <ClInclude Include="gf2n.h" />
-    <ClInclude Include="gfpcrypt.h" />
-    <ClInclude Include="gost.h" />
-    <ClInclude Include="gzip.h" />
-    <ClInclude Include="hc128.h" />
-    <ClInclude Include="hc256.h" />
-    <ClInclude Include="hex.h" />
-    <ClInclude Include="hight.h" />
-    <ClInclude Include="hkdf.h" />
-    <ClInclude Include="hmac.h" />
-    <ClInclude Include="hmqv.h" />
-    <ClInclude Include="hrtimer.h" />
-    <ClInclude Include="ida.h" />
-    <ClInclude Include="idea.h" />
-    <ClInclude Include="integer.h" />
-    <ClInclude Include="iterhash.h" />
-    <ClInclude Include="kalyna.h" />
-    <ClInclude Include="keccak.h" />
-    <ClInclude Include="lubyrack.h" />
-    <ClInclude Include="lea.h" />
-    <ClInclude Include="lsh.h" />
-    <ClInclude Include="luc.h" />
-    <ClInclude Include="mars.h" />
-    <ClInclude Include="md2.h" />
-    <ClInclude Include="md4.h" />
-    <ClInclude Include="md5.h" />
-    <ClInclude Include="mdc.h" />
-    <ClInclude Include="misc.h" />
-    <ClInclude Include="modarith.h" />
-    <ClInclude Include="modes.h" />
-    <ClInclude Include="modexppc.h" />
-    <ClInclude Include="mqueue.h" />
-    <ClInclude Include="mqv.h" />
-    <ClInclude Include="naclite.h" />
-    <ClInclude Include="nbtheory.h" />
-    <ClInclude Include="nr.h" />
-    <ClInclude Include="oaep.h" />
-    <ClInclude Include="oids.h" />
-    <ClInclude Include="osrng.h" />
-    <ClInclude Include="padlkrng.h" />
-    <ClInclude Include="panama.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="pkcspad.h" />
-    <ClInclude Include="poly1305.h" />
-    <ClInclude Include="polynomi.h" />
-    <ClInclude Include="pssr.h" />
-    <ClInclude Include="pubkey.h" />
-    <ClInclude Include="pwdbased.h" />
-    <ClInclude Include="queue.h" />
-    <ClInclude Include="rabin.h" />
-    <ClInclude Include="randpool.h" />
-    <ClInclude Include="rabbit.h" />
-    <ClInclude Include="rc2.h" />
-    <ClInclude Include="rc5.h" />
-    <ClInclude Include="rc6.h" />
-    <ClInclude Include="rdrand.h" />
-    <ClInclude Include="rijndael.h" />
-    <ClInclude Include="ripemd.h" />
-    <ClInclude Include="rng.h" />
-    <ClInclude Include="rsa.h" />
-    <ClInclude Include="rw.h" />
-    <ClInclude Include="safer.h" />
-    <ClInclude Include="salsa.h" />
-    <ClInclude Include="scrypt.h" />
-    <ClInclude Include="seal.h" />
-    <ClInclude Include="secblock.h" />
-    <ClInclude Include="secblockfwd.h" />
-    <ClInclude Include="seckey.h" />
-    <ClInclude Include="seed.h" />
-    <ClInclude Include="serpent.h" />
-    <ClInclude Include="sha.h" />
-    <ClInclude Include="sha3.h" />
-    <ClInclude Include="shacal2.h" />
-    <ClInclude Include="shake.h" />
-    <ClInclude Include="shark.h" />
-    <ClInclude Include="simple.h" />
-    <ClInclude Include="simeck.h" />
-    <ClInclude Include="simon.h" />
-    <ClInclude Include="siphash.h" />
-    <ClInclude Include="skipjack.h" />
-    <ClInclude Include="sm3.h" />
-    <ClInclude Include="sm4.h" />
-    <ClInclude Include="smartptr.h" />
-    <ClInclude Include="sosemanuk.h" />
-    <ClInclude Include="speck.h" />
-    <ClInclude Include="square.h" />
-    <ClInclude Include="stdcpp.h" />
-    <ClInclude Include="strciphr.h" />
-    <ClInclude Include="tea.h" />
-    <ClInclude Include="threefish.h" />
-    <ClInclude Include="tiger.h" />
-    <ClInclude Include="trap.h" />
-    <ClInclude Include="trunhash.h" />
-    <ClInclude Include="ttmac.h" />
-    <ClInclude Include="tweetnacl.h" />
-    <ClInclude Include="twofish.h" />
-    <ClInclude Include="vmac.h" />
-    <ClInclude Include="wake.h" />
-    <ClInclude Include="whrlpool.h" />
-    <ClInclude Include="words.h" />
-    <ClInclude Include="xed25519.h" />
-    <ClInclude Include="xtr.h" />
-    <ClInclude Include="xtrcrypt.h" />
-    <ClInclude Include="xts.h" />
-    <ClInclude Include="zdeflate.h" />
-    <ClInclude Include="zinflate.h" />
-    <ClInclude Include="zlib.h" />
+    <ClInclude Include="include\3way.h" />
+    <ClInclude Include="include\adler32.h" />
+    <ClInclude Include="include\adv_simd.h" />
+    <ClInclude Include="include\aes.h" />
+    <ClInclude Include="include\aes_armv4.h" />
+    <ClInclude Include="include\algebra.h" />
+    <ClInclude Include="include\algparam.h" />
+    <ClInclude Include="include\allocate.h" />
+    <ClInclude Include="include\arc4.h" />
+    <ClInclude Include="include\argnames.h" />
+    <ClInclude Include="include\aria.h" />
+    <ClInclude Include="include\arm_simd.h" />
+    <ClInclude Include="include\asn.h" />
+    <ClInclude Include="include\authenc.h" />
+    <ClInclude Include="include\base32.h" />
+    <ClInclude Include="include\base64.h" />
+    <ClInclude Include="include\basecode.h" />
+    <ClInclude Include="include\blake2.h" />
+    <ClInclude Include="include\blowfish.h" />
+    <ClInclude Include="include\blumshub.h" />
+    <ClInclude Include="include\camellia.h" />
+    <ClInclude Include="include\cast.h" />
+    <ClInclude Include="include\cbcmac.h" />
+    <ClInclude Include="include\ccm.h" />
+    <ClInclude Include="include\chacha.h" />
+    <ClInclude Include="include\chachapoly.h" />
+    <ClInclude Include="include\cham.h" />
+    <ClInclude Include="include\channels.h" />
+    <ClInclude Include="include\cmac.h" />
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\config_align.h" />
+    <ClInclude Include="include\config_asm.h" />
+    <ClInclude Include="include\config_cpu.h" />
+    <ClInclude Include="include\config_cxx.h" />
+    <ClInclude Include="include\config_dll.h" />
+    <ClInclude Include="include\config_int.h" />
+    <ClInclude Include="include\config_misc.h" />
+    <ClInclude Include="include\config_ns.h" />
+    <ClInclude Include="include\config_os.h" />
+    <ClInclude Include="include\config_ver.h" />
+    <ClInclude Include="include\cpu.h" />
+    <ClInclude Include="include\crc.h" />
+    <ClInclude Include="include\cryptlib.h" />
+    <ClInclude Include="include\darn.h" />
+    <ClInclude Include="include\default.h" />
+    <ClInclude Include="include\des.h" />
+    <ClInclude Include="include\dh.h" />
+    <ClInclude Include="include\dh2.h" />
+    <ClInclude Include="include\dll.h" />
+    <ClInclude Include="include\dmac.h" />
+    <ClInclude Include="include\donna.h" />
+    <ClInclude Include="include\donna_32.h" />
+    <ClInclude Include="include\donna_64.h" />
+    <ClInclude Include="include\donna_sse.h" />
+    <ClInclude Include="include\drbg.h" />
+    <ClInclude Include="include\dsa.h" />
+    <ClInclude Include="include\eax.h" />
+    <ClInclude Include="include\ec2n.h" />
+    <ClInclude Include="include\eccrypto.h" />
+    <ClInclude Include="include\ecp.h" />
+    <ClInclude Include="include\ecpoint.h" />
+    <ClInclude Include="include\elgamal.h" />
+    <ClInclude Include="include\emsa2.h" />
+    <ClInclude Include="include\eprecomp.h" />
+    <ClInclude Include="include\esign.h" />
+    <ClInclude Include="include\fhmqv.h" />
+    <ClInclude Include="include\files.h" />
+    <ClInclude Include="include\filters.h" />
+    <ClInclude Include="include\fips140.h" />
+    <ClInclude Include="include\fltrimpl.h" />
+    <ClInclude Include="include\gcm.h" />
+    <ClInclude Include="include\gf256.h" />
+    <ClInclude Include="include\gf2n.h" />
+    <ClInclude Include="include\gf2_32.h" />
+    <ClInclude Include="include\gfpcrypt.h" />
+    <ClInclude Include="include\gost.h" />
+    <ClInclude Include="include\gzip.h" />
+    <ClInclude Include="include\hashfwd.h" />
+    <ClInclude Include="include\hc128.h" />
+    <ClInclude Include="include\hc256.h" />
+    <ClInclude Include="include\hex.h" />
+    <ClInclude Include="include\hight.h" />
+    <ClInclude Include="include\hkdf.h" />
+    <ClInclude Include="include\hmac.h" />
+    <ClInclude Include="include\hmqv.h" />
+    <ClInclude Include="include\hrtimer.h" />
+    <ClInclude Include="include\ida.h" />
+    <ClInclude Include="include\idea.h" />
+    <ClInclude Include="include\integer.h" />
+    <ClInclude Include="include\iterhash.h" />
+    <ClInclude Include="include\kalyna.h" />
+    <ClInclude Include="include\keccak.h" />
+    <ClInclude Include="include\lea.h" />
+    <ClInclude Include="include\lsh.h" />
+    <ClInclude Include="include\lubyrack.h" />
+    <ClInclude Include="include\luc.h" />
+    <ClInclude Include="include\mars.h" />
+    <ClInclude Include="include\md2.h" />
+    <ClInclude Include="include\md4.h" />
+    <ClInclude Include="include\md5.h" />
+    <ClInclude Include="include\mdc.h" />
+    <ClInclude Include="include\mersenne.h" />
+    <ClInclude Include="include\misc.h" />
+    <ClInclude Include="include\modarith.h" />
+    <ClInclude Include="include\modes.h" />
+    <ClInclude Include="include\modexppc.h" />
+    <ClInclude Include="include\mqueue.h" />
+    <ClInclude Include="include\mqv.h" />
+    <ClInclude Include="include\naclite.h" />
+    <ClInclude Include="include\nbtheory.h" />
+    <ClInclude Include="include\nr.h" />
+    <ClInclude Include="include\oaep.h" />
+    <ClInclude Include="include\oids.h" />
+    <ClInclude Include="include\osrng.h" />
+    <ClInclude Include="include\ossig.h" />
+    <ClInclude Include="include\padlkrng.h" />
+    <ClInclude Include="include\panama.h" />
+    <ClInclude Include="include\pch.h" />
+    <ClInclude Include="include\pkcspad.h" />
+    <ClInclude Include="include\poly1305.h" />
+    <ClInclude Include="include\polynomi.h" />
+    <ClInclude Include="include\ppc_simd.h" />
+    <ClInclude Include="include\pssr.h" />
+    <ClInclude Include="include\pubkey.h" />
+    <ClInclude Include="include\pwdbased.h" />
+    <ClInclude Include="include\queue.h" />
+    <ClInclude Include="include\rabbit.h" />
+    <ClInclude Include="include\rabin.h" />
+    <ClInclude Include="include\randpool.h" />
+    <ClInclude Include="include\rc2.h" />
+    <ClInclude Include="include\rc5.h" />
+    <ClInclude Include="include\rc6.h" />
+    <ClInclude Include="include\rdrand.h" />
+    <ClInclude Include="include\resource.h" />
+    <ClInclude Include="include\rijndael.h" />
+    <ClInclude Include="include\ripemd.h" />
+    <ClInclude Include="include\rng.h" />
+    <ClInclude Include="include\rsa.h" />
+    <ClInclude Include="include\rw.h" />
+    <ClInclude Include="include\safer.h" />
+    <ClInclude Include="include\salsa.h" />
+    <ClInclude Include="include\scrypt.h" />
+    <ClInclude Include="include\seal.h" />
+    <ClInclude Include="include\secblock.h" />
+    <ClInclude Include="include\secblockfwd.h" />
+    <ClInclude Include="include\seckey.h" />
+    <ClInclude Include="include\seed.h" />
+    <ClInclude Include="include\serpent.h" />
+    <ClInclude Include="include\serpentp.h" />
+    <ClInclude Include="include\sha.h" />
+    <ClInclude Include="include\sha1_armv4.h" />
+    <ClInclude Include="include\sha256_armv4.h" />
+    <ClInclude Include="include\sha3.h" />
+    <ClInclude Include="include\sha512_armv4.h" />
+    <ClInclude Include="include\shacal2.h" />
+    <ClInclude Include="include\shake.h" />
+    <ClInclude Include="include\shark.h" />
+    <ClInclude Include="include\simeck.h" />
+    <ClInclude Include="include\simon.h" />
+    <ClInclude Include="include\simple.h" />
+    <ClInclude Include="include\siphash.h" />
+    <ClInclude Include="include\skipjack.h" />
+    <ClInclude Include="include\sm3.h" />
+    <ClInclude Include="include\sm4.h" />
+    <ClInclude Include="include\smartptr.h" />
+    <ClInclude Include="include\sosemanuk.h" />
+    <ClInclude Include="include\speck.h" />
+    <ClInclude Include="include\square.h" />
+    <ClInclude Include="include\stdcpp.h" />
+    <ClInclude Include="include\strciphr.h" />
+    <ClInclude Include="include\tea.h" />
+    <ClInclude Include="include\threefish.h" />
+    <ClInclude Include="include\tiger.h" />
+    <ClInclude Include="include\trap.h" />
+    <ClInclude Include="include\trunhash.h" />
+    <ClInclude Include="include\ttmac.h" />
+    <ClInclude Include="include\tweetnacl.h" />
+    <ClInclude Include="include\twofish.h" />
+    <ClInclude Include="include\vmac.h" />
+    <ClInclude Include="include\wake.h" />
+    <ClInclude Include="include\whrlpool.h" />
+    <ClInclude Include="include\words.h" />
+    <ClInclude Include="include\xed25519.h" />
+    <ClInclude Include="include\xtr.h" />
+    <ClInclude Include="include\xtrcrypt.h" />
+    <ClInclude Include="include\xts.h" />
+    <ClInclude Include="include\zdeflate.h" />
+    <ClInclude Include="include\zinflate.h" />
+    <ClInclude Include="include\zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="asm\rdrand.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="asm\rdseed.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="asm\x64dll.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="asm\x64masm.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building and Assembling %(Filename).asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
