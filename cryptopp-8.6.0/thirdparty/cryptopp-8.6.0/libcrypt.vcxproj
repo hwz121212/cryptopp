@@ -61,7 +61,7 @@
       <ErrorReporting>None</ErrorReporting>
       <WarningLevel>Level4</WarningLevel>
       <DisableSpecificWarnings>4231; 4251; 4275; 4355; 4505</DisableSpecificWarnings>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>$(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -202,7 +202,10 @@
     <ClCompile Include="src\osrng.cpp" />
     <ClCompile Include="src\padlkrng.cpp" />
     <ClCompile Include="src\panama.cpp" />
-    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\pkcspad.cpp" />
     <ClCompile Include="src\poly1305.cpp" />
     <ClCompile Include="src\polynomi.cpp" />
