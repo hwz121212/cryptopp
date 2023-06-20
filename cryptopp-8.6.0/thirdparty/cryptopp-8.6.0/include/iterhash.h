@@ -99,7 +99,7 @@ protected:
 	inline T GetBitCountLo() const
 		{return m_countLo << 3;}
 
-	void PadLastBlock(unsigned int lastBlockSize, byte padFirst=0x80);
+	virtual void PadLastBlock(unsigned int lastBlockSize, byte padFirst=0x80);
 	virtual void Init() =0;
 
 	virtual ByteOrder GetByteOrder() const =0;

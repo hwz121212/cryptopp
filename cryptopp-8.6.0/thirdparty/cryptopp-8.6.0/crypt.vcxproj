@@ -429,10 +429,7 @@
     <ClCompile Include="src\threefish.cpp" />
     <ClCompile Include="src\tiger.cpp" />
     <ClCompile Include="src\tigertab.cpp" />
-    <ClCompile Include="src\ttmac.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="src\ttmac.cpp" />
     <ClCompile Include="src\tweetnacl.cpp" />
     <ClCompile Include="src\twofish.cpp" />
     <ClCompile Include="src\vmac.cpp" />
