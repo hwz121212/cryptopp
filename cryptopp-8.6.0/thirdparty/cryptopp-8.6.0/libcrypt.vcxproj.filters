@@ -1121,6 +1121,9 @@
     <Filter Include="asm">
       <UniqueIdentifier>{def2182f-4c4d-4e0b-bafc-88b347635c19}</UniqueIdentifier>
     </Filter>
+    <Filter Include="obj">
+      <UniqueIdentifier>{95d06dd6-bf07-4a96-bad0-df47b11a12fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="asm\rdrand.asm">
@@ -1135,5 +1138,19 @@
     <MASM Include="asm\x64masm.asm">
       <Filter>asm</Filter>
     </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="obj\rdrand.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\rdseed.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\x64dll.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\x64masm.obj">
+      <Filter>obj</Filter>
+    </Object>
   </ItemGroup>
 </Project>

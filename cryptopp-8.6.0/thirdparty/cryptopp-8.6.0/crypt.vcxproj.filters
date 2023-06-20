@@ -1,433 +1,1156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{82666edd-7baf-4a5a-922c-a06edc2198bd}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    <Filter Include="include">
+      <UniqueIdentifier>{40ea6ac2-a097-45b0-a417-5ff02001adc6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{2029b271-c489-4b4c-9ce5-261b4cfe2d78}</UniqueIdentifier>
-      <Extensions>.h</Extensions>
+    <Filter Include="asm">
+      <UniqueIdentifier>{5b09ea96-74fb-4176-823b-277c0042af4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8ba7064a-3f55-4622-b6b5-2b1ddcda2bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj">
+      <UniqueIdentifier>{0e15a5eb-620d-41e4-a845-bafb3a25dc32}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="algebra.cpp">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="include\3way.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\adler32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\adv_simd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aes_armv4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\algebra.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\algparam.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\allocate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\arc4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\argnames.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aria.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\arm_simd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\asn.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\authenc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base64.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\basecode.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\blake2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\blowfish.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\blumshub.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\camellia.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cast.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cbcmac.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ccm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\chacha.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\chachapoly.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cham.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\channels.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cmac.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_align.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_asm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_cpu.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_cxx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_dll.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_int.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_misc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_ns.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_os.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config_ver.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cpu.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\crc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cryptlib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\darn.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\default.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\des.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dh.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dh2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dll.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dmac.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\donna.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\donna_32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\donna_64.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\donna_sse.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\drbg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dsa.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\eax.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ec2n.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\eccrypto.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ecp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ecpoint.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elgamal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\emsa2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\eprecomp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\esign.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fhmqv.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\files.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\filters.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fips140.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fltrimpl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gcm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gf2_32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gf2n.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gf256.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gfpcrypt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gost.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gzip.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hashfwd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hc128.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hc256.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hex.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hight.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hkdf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hmac.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hmqv.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hrtimer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ida.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\idea.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\integer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iterhash.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\kalyna.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\keccak.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lea.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lsh.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lubyrack.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\luc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mars.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\md2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\md4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\md5.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mdc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mersenne.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\misc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modarith.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modexppc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mqueue.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mqv.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\naclite.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nbtheory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\oaep.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\oids.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\osrng.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ossig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\padlkrng.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\panama.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pkcspad.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\poly1305.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\polynomi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ppc_simd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pssr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pubkey.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pwdbased.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\queue.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rabbit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rabin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\randpool.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rc2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rc5.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rc6.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rdrand.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rijndael.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ripemd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rng.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rsa.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rw.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\safer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\salsa.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrypt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\seal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\secblock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\secblockfwd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\seckey.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\seed.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\serpent.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\serpentp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha1_armv4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha256_armv4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha512_armv4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shacal2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shake.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shark.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\simeck.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\simon.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\simple.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\siphash.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\skipjack.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sm3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sm4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smartptr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sosemanuk.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\speck.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\square.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stdcpp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\strciphr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tea.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\threefish.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tiger.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trap.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trunhash.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttmac.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tweetnacl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\twofish.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmac.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wake.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\whrlpool.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\words.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xed25519.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xtr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xtrcrypt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xts.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zdeflate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zinflate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zlib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="asm\rdrand.asm">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="asm\rdseed.asm">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="asm\x64dll.asm">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="asm\x64masm.asm">
+      <Filter>asm</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\3way.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="algparam.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\adler32.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="allocate.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\algebra.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="asn.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\algparam.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="authenc.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\allocate.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="basecode.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\arc4.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="cbcmac.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\aria.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="ccm.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\aria_simd.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="channels.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\ariatab.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="cmac.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\asn.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="cpu.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\authenc.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="cryptlib.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\base32.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="des.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\base64.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="dessp.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\basecode.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="dh.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\bfinit.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="dll.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\blake2.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="dsa.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\blake2b_simd.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="ec2n.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\blake2s_simd.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="eccrypto.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\blowfish.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="ecp.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\blumshub.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="emsa2.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\camellia.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="eprecomp.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cast.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="files.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\casts.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="filters.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cbcmac.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="fips140.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\ccm.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="fipstest.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\chacha.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="gcm.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\chacha_avx.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="gcm_simd.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\chacha_simd.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="gf2n.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\chachapoly.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="gf2n_simd.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cham.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="gfpcrypt.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cham_simd.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="hex.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\channels.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="hmac.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cmac.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="hrtimer.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cpu.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="integer.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\crc.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="iterhash.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\crc_simd.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="misc.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\cryptlib.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="modes.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\darn.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="mqueue.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\default.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="nbtheory.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\des.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="oaep.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\dessp.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="osrng.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\dh.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\dh2.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="pkcspad.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\dll.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="pssr.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\donna_32.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="pubkey.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\donna_64.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="queue.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\donna_sse.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="randpool.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\dsa.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="rdtables.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\eax.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="rijndael.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\ec2n.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="rijndael_simd.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\eccrypto.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="rng.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\ecp.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="rsa.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\elgamal.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="rw.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\emsa2.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="sha.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\eprecomp.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="sha_simd.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\esign.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="simple.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\files.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="skipjack.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\filters.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="sse_simd.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\fips140.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="strciphr.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\fipstest.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gcm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gcm_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gf2_32.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gf2n.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gf2n_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gf256.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfpcrypt.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gost.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hc128.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hc256.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hex.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hight.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hmac.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hrtimer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ida.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\idea.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\integer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\iterhash.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kalyna.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kalynatab.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\keccak.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\keccak_core.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\keccak_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lea.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lea_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lsh256.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lsh256_avx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lsh256_sse.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lsh512.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lsh512_avx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lsh512_sse.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\luc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mars.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\marss.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\md2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\md4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\md5.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\misc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modes.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mqueue.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mqv.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nbtheory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\neon_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\oaep.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\osrng.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\padlkrng.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\panama.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pkcspad.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\poly1305.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\polynomi.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ppc_power7.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ppc_power8.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ppc_power9.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ppc_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pssr.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pubkey.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\queue.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rabbit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rabin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\randpool.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rc2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rc5.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rc6.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rdrand.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rdtables.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rijndael.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rijndael_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ripemd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rng.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rsa.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rw.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\safer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\salsa.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scrypt.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\seal.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\seed.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\serpent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sha.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sha_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sha3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shacal2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shacal2_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shake.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shark.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sharkbox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simeck.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simon.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simon128_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simple.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\skipjack.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sm3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sm4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sm4_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sosemanuk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\speck.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\speck128_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\square.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\squaretb.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sse_simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\strciphr.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tea.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tftables.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\threefish.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tiger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tigertab.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ttmac.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tweetnacl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\twofish.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vmac.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wake.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\whrlpool.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xed25519.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtr.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtrcrypt.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xts.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zdeflate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zinflate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="aes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="algebra.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="algparam.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="allocate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="argnames.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="asn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="authenc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="basecode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cbcmac.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ccm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="channels.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cmac.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_align.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_asm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_cpu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_cxx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_dll.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_int.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_misc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_ns.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_os.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="config_ver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cpu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cryptlib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="des.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dll.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dsa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ec2n.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="eccrypto.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ecp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ecpoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="emsa2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="eprecomp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="files.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="filters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="fips140.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="fltrimpl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="gcm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="gf2n.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="gfpcrypt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hmac.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="integer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="iterhash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mdc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="misc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="modarith.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="modes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="modexppc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mqueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mqv.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="nbtheory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="oaep.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="oids.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="osrng.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pkcspad.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pssr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pubkey.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="queue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="randpool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rijndael.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rng.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rsa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rw.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="secblock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="seckey.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sha.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="simple.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="skipjack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="smartptr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stdcpp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="strciphr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="trap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="words.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="cryptopp.rc">
-      <Filter>Source Files</Filter>
-    </ResourceCompile>
+    <Object Include="obj\rdrand.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\rdseed.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\x64dll.obj">
+      <Filter>obj</Filter>
+    </Object>
+    <Object Include="obj\x64masm.obj">
+      <Filter>obj</Filter>
+    </Object>
   </ItemGroup>
 </Project>
